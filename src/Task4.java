@@ -6,8 +6,14 @@ public class Task4 {
         System.out.println("Type your password");
         String inputPassword = scanner.next();
         String rightPassword = "octopus";
-        if(inputPassword.equals(rightPassword))
+        String close = "quit";
+        if (inputPassword.equals(rightPassword)) {
             System.out.println("Welcome");
-        else System.out.println("Try again");
+            scanner.close();
+        } else if (inputPassword.equals(close)){
+            scanner.close();
+        } else {
+            System.out.println("Try again");
+        }
     }
 }

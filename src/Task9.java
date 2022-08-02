@@ -9,15 +9,26 @@ public class Task9 {
         while (!isExit) {
             System.out.print("Enter symbol: ");
             char[] line = scan.nextLine().toCharArray();
-            for (char c : line) {
-                if (c == ' ') {
-                    spaceCount++;
-                } else if (c == '.') {
-                    isExit = true;
-                    break;
-                }
+            String st = String.copyValueOf(line);
+            spaceCount += st.split(" ").length - 1;
+            if (st.contains(".")) {
+                break;
             }
         }
-        System.out.println(spaceCount);
+        System.out.println("Amount of space is: " + spaceCount);
     }
 }
+
+
+
+
+
+
+//            for (char c : line) {
+//                if (c == ' ') {
+//                    spaceCount++;
+//                } else if (c == '.') {
+//                    isExit = true;
+ //                   break;
+
+
